@@ -21,13 +21,12 @@ lalu pada data transaksi juga terdapat smarcontract baru yang memungkinkan untuk
 sebelum itu coba memanggil function pertama, disini saya menggunakan react js (dengan memakai code :u develop web ketika saya menggunakan solidity untuk backend saya). sebelum itu pastikan rpc, abi, chain diset agar terhubung ke jaringan testnet sepolia.
 ```python
 handleFetching = async (signer) => {
-    const getMessage = new ethers.Contract(contractAddress, CoreABI, signer);
-    this.props.setContract(getMessage);
+const getMessage = new ethers.Contract(contractAddress, CoreABI, signer);
+this.props.setContract(getMessage);
 
-    
-    let message = await getMessage.firstTruth();
-    console.log(message)
-    let blockedList = await getMessage.GetBlockList();
+let message = await getMessage.firstTruth();
+console.log(message)
+let blockedList = await getMessage.GetBlockList();
 ```
 maka akan mereturn hasil flag{7h3_0nly_4nswer
 
